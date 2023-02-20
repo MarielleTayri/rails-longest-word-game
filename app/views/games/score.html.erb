@@ -1,0 +1,16 @@
+<div class="container">
+
+<h1> SCORE </h1>
+
+<% if @contain %>
+  <% if @known_word %>
+    <p><strong>Bravo bien ouej!</strong> <%= @word %> est validé!</p>
+  <% else %>
+    <p>Nope <strong><%= @word %></strong> n'est pas du tout valide</p>
+  <% end %>
+<% else %>
+  <p>Pas du tout : <strong><%= @word %></strong> ne peut pas être fabriqué depuis <%= @letters.join(", ") %></p>
+<% end %>
+
+<%= link_to "Allez retente", new_path, class:'toto' %>
+</div>
